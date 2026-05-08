@@ -8,10 +8,14 @@ import Home from './pages/Home';
 import MainLayout from './layouts/MainLayout';
 
 import Profile from './pages/Profile';
+import Leaves from './pages/Leaves';
+
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
     <AuthProvider>
+      <Toaster position="top-center" reverseOrder={false} />
       <Router>
         <Routes>
           <Route path="/" element={<Welcome />} />
@@ -28,7 +32,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/timesheet" element={<div className="page-container"><h2>Timesheet Page</h2></div>} />
             <Route path="/projects" element={<div className="page-container"><h2>Projects Page</h2></div>} />
-            <Route path="/leaves" element={<div className="page-container"><h2>Leaves Page</h2></div>} />
+            <Route path="/leaves" element={<Leaves />} />
             <Route path="/wfh" element={<div className="page-container"><h2>WFH Page</h2></div>} />
             <Route path="/profile" element={<Profile />} />
           </Route>
