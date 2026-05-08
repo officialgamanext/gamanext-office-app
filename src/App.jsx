@@ -11,6 +11,7 @@ import Profile from './pages/Profile';
 import Leaves from './pages/Leaves';
 import Projects from './pages/Projects';
 import WFH from './pages/WFH';
+import Timesheet from './pages/Timesheet';
 
 import { Toaster } from 'react-hot-toast';
 
@@ -32,7 +33,7 @@ function App() {
             }
           >
             <Route path="/home" element={<Home />} />
-            <Route path="/timesheet" element={<div className="page-container"><h2>Timesheet Page</h2></div>} />
+            <Route path="/timesheet" element={<Timesheet />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/leaves" element={<Leaves />} />
             <Route path="/wfh" element={<WFH />} />
