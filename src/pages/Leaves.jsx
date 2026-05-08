@@ -274,6 +274,10 @@ const Leaves = () => {
                   <div style={{ flex: 1 }}>
                     <h4 style={{ fontSize: '0.85rem', fontWeight: '700', marginBottom: '2px' }}>{lv.type}</h4>
                     <p style={{ fontSize: '0.7rem', color: 'var(--text-light)' }}>{lv.days} Days</p>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: '#94a3b8', fontSize: '0.65rem', marginTop: '2px' }}>
+                      <AlertCircle size={10} />
+                      <span style={{ fontStyle: 'italic' }}>{lv.reason}</span>
+                    </div>
                   </div>
 
                   <span style={{ 

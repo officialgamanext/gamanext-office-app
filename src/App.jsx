@@ -10,6 +10,7 @@ import MainLayout from './layouts/MainLayout';
 import Profile from './pages/Profile';
 import Leaves from './pages/Leaves';
 import Projects from './pages/Projects';
+import WFH from './pages/WFH';
 
 import { Toaster } from 'react-hot-toast';
 
@@ -34,7 +35,7 @@ function App() {
             <Route path="/timesheet" element={<div className="page-container"><h2>Timesheet Page</h2></div>} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/leaves" element={<Leaves />} />
-            <Route path="/wfh" element={<div className="page-container"><h2>WFH Page</h2></div>} />
+            <Route path="/wfh" element={<WFH />} />
             <Route path="/profile" element={<Profile />} />
           </Route>
 
