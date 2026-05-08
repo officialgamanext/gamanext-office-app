@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
   --primary: #005ae2;
@@ -34,7 +34,7 @@
 }
 
 body {
-  font-family: 'Outfit', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -193,6 +193,7 @@ a {
   border-top: 1px solid var(--border);
   z-index: 100;
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 18px 18px 0 0;
 }
 
 @media (min-width: 481px) {
