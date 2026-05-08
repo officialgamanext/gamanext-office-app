@@ -1,14 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Bell, Search, Briefcase, Clock, Calendar } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
 
 const Home = () => {
+  const { user } = useAuth();
+
   return (
     <div className="page-container" style={{ gap: '1.5rem' }}>
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>
           <h3 style={{ fontSize: '0.9rem', color: 'var(--text-light)', fontWeight: '500' }}>Good Morning,</h3>
-          <h2 style={{ fontSize: '1.3rem', fontWeight: '700' }}>Siva Krishna 👋</h2>
+          <h2 style={{ fontSize: '1.3rem', fontWeight: '700' }}>{user?.firstName || 'User'} {user?.lastName || ''} 👋</h2>
         </div>
         <button style={{ background: 'var(--bg-soft)', padding: '0.6rem', borderRadius: '50%', color: 'var(--text)' }}>
           <Bell size={20} />
@@ -33,12 +36,12 @@ const Home = () => {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
           <div style={{ background: 'var(--bg-soft)', padding: '1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border)' }}>
             <Briefcase size={24} color="var(--primary)" style={{ marginBottom: '0.75rem' }} />
-            <h4 style={{ fontSize: '1.2rem', fontWeight: '700' }}>24</h4>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: '700' }}>{user?.totalTasks || '0'}</h4>
             <p style={{ color: 'var(--text-light)', fontSize: '0.85rem' }}>Total Tasks</p>
           </div>
           <div style={{ background: 'var(--bg-soft)', padding: '1.25rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border)' }}>
             <Calendar size={24} color="#f59e0b" style={{ marginBottom: '0.75rem' }} />
-            <h4 style={{ fontSize: '1.2rem', fontWeight: '700' }}>12</h4>
+            <h4 style={{ fontSize: '1.2rem', fontWeight: '700' }}>{user?.leavesRemaining || '0'}</h4>
             <p style={{ color: 'var(--text-light)', fontSize: '0.85rem' }}>Leaves Left</p>
           </div>
         </div>
