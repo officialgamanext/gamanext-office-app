@@ -8,15 +8,10 @@ const Home = () => {
 
   return (
     <div className="page-container" style={{ gap: '1.5rem' }}>
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div>
-          <h3 style={{ fontSize: '0.9rem', color: 'var(--text-light)', fontWeight: '500' }}>Good Morning,</h3>
-          <h2 style={{ fontSize: '1.3rem', fontWeight: '700' }}>{user?.firstName || 'User'} {user?.lastName || ''} 👋</h2>
-        </div>
-        <button style={{ background: 'var(--bg-soft)', padding: '0.6rem', borderRadius: '50%', color: 'var(--text)' }}>
-          <Bell size={20} />
-        </button>
-      </header>
+      <div style={{ marginTop: '0.5rem' }}>
+        <h3 style={{ fontSize: '0.9rem', color: 'var(--text-light)', fontWeight: '500' }}>Good Morning,</h3>
+        <h2 style={{ fontSize: '1.3rem', fontWeight: '700' }}>{user?.firstName || 'User'} {user?.lastName || ''} 👋</h2>
+      </div>
 
       <div className="glass" style={{ padding: '1.5rem', borderRadius: 'var(--radius-lg)', background: 'var(--primary)', color: 'white' }}>
         <p style={{ opacity: 0.8, fontSize: '0.9rem', marginBottom: '0.25rem' }}>Attendance Today</p>

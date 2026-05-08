@@ -1,11 +1,31 @@
 import React from 'react';
-import { Outlet, NavLink } from 'react-router-dom';
-import { Home, Calendar, Clock, User } from 'lucide-react';
+import { Outlet, NavLink, useNavigate } from 'react-router-dom';
+import { Home, Calendar, Clock, User, Bell } from 'lucide-react';
+import logo from '../assets/logo-h.png';
 
 const Layout = () => {
+  const navigate = useNavigate();
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', paddingBottom: '70px' }}>
-      <Outlet />
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', paddingBottom: '70px', paddingTop: '65px' }}>
+      {/* Top Header */}
+      <header className="top-header glass">
+        <button className="header-icon-btn" onClick={() => navigate('/home')}>
+          <Home size={22} />
+        </button>
+        
+        <div className="header-logo">
+          <img src={logo} alt="Gamanext" />
+        </div>
+        
+        <button className="header-icon-btn">
+          <Bell size={22} />
+        </button>
+      </header>
+
+      <main style={{ flex: 1 }}>
+        <Outlet />
+      </main>
       
       <nav className="bottom-bar glass">
         <NavLink to="/home" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
