@@ -26,8 +26,10 @@ function App() {
             }
           >
             <Route path="/home" element={<Home />} />
-            <Route path="/tasks" element={<div className="page-container"><h2>Tasks Page</h2></div>} />
-            <Route path="/attendance" element={<div className="page-container"><h2>Attendance History</h2></div>} />
+            <Route path="/timesheet" element={<div className="page-container"><h2>Timesheet Page</h2></div>} />
+            <Route path="/projects" element={<div className="page-container"><h2>Projects Page</h2></div>} />
+            <Route path="/leaves" element={<div className="page-container"><h2>Leaves Page</h2></div>} />
+            <Route path="/wfh" element={<div className="page-container"><h2>WFH Page</h2></div>} />
             <Route path="/profile" element={<Profile />} />
           </Route>
 
